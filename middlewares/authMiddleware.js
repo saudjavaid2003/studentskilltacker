@@ -1,7 +1,7 @@
 // middleware/authMiddleware.js
 import jwt from "jsonwebtoken";
 
-export const authWithRole = (...roles) => {
+export const authentiate = (...roles) => {
   return (req, res, next) => {
     try {
       const token = req.cookies?.token || req.headers.authorization?.split(" ")[1];
