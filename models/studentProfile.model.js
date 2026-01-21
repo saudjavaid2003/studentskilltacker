@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 const StudentProfileSchema = new mongoose.Schema({
   userId:     { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  department: { type: String, default: "BSCS" },
+  degree: { type: String, default: "BSCS" },
   semester:   { type: Number },
   cgpa:       { type: Number, min: 0, max: 4.0 },
 
-  technicalSkills: [{ type: String }], // e.g: ["React", "Python"]
-  softSkills:      [{ type: String }], // e.g: ["Communication", "Leadership"]
+  technicalSkills: [{ type: String }],
+  softSkills:      [{ type: String }], 
 
   academics: [{
     course: String,

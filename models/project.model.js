@@ -5,8 +5,9 @@ const ProjectSchema = new mongoose.Schema({
   title:     { type: String, required: true },
   description: String,
   techStack:   [{ type: String }],
-  score:       Number,   // faculty evaluation (optional)
-  link:        String,   // GitHub / Live
+  score:       Number, 
+  link :String,
+  
 }, { timestamps: true });
 
 export default mongoose.model("Project", ProjectSchema);
