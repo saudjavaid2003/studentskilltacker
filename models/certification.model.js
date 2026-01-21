@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
-
 const CertificationSchema = new mongoose.Schema({
   studentId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-  title:     { type: String, required: true },
-  org:       { type: String },
+  title: { type: String, required: true },
+  org: { type: String },
   credentialUrl: { type: String },
-
-  imagePath: { type: String }, // e.g: '/uploads/certs/abc.png'
+  imagePath: { type: String, required: true },
 }, { timestamps: true });
 
-export default mongoose.model("Certification", CertificationSchema);
+
+const Certification = mongoose.model("Certification", CertificationSchema);
+
+module.exports = Certification;
